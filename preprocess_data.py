@@ -5,7 +5,7 @@ import numpy as np
 
 # Carregar document
 
-df = pd.read_csv("HCMST_ver_3.04.csv",low_memory=False)
+df = pd.read_csv("./data/HCMST_ver_3.04.csv",low_memory=False)
 
 # Ajustar noms de camps per legibilitat i fent "yes/no" -> 1/0 per a ser operables
 
@@ -35,5 +35,5 @@ year = df.groupby(["Year","same_sex_couple"])[["Friend","Bar/Restaurant","Work",
 
 # Guardar taules generades
 
-year.to_csv("year.csv")
-group.to_csv("group.csv")
+year.to_csv("./data/year.csv")
+group.to_csv("./data/group.csv")
